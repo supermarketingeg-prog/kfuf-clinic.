@@ -1,0 +1,1414 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>KFUF Clinic | عيادة كفوف للجلدية والتجميل - زهراء المعادي</title>
+  <link rel="icon" type="image/png" href="kfuf_logo.png">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <!-- Google Fonts: Cairo, Playfair Display & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;1,500&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#fdf2f8',
+              100: '#fce7f3',
+              200: '#fbcfe8',
+              300: '#f472b6',
+              400: '#ec4899',
+              500: '#db2777', // Matched with KFUF Logo vibrant berry pink
+              600: '#be185d', // Signature Luxury Rose
+              700: '#9d174d',
+              800: '#831843',
+              900: '#500724',
+            },
+            medical: {
+              navy: '#18181b', // Crisp slate black from logo lines
+              charcoal: '#27272a',
+              slate: '#3f3f46',
+              gray: '#71717a',
+              light: '#fafafa',
+              card: '#ffffff'
+            }
+          },
+          fontFamily: {
+            arabic: ['Cairo', 'sans-serif'],
+            serif: ['Playfair Display', 'serif'],
+            sans: ['Plus Jakarta Sans', 'Cairo', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      font-family: 'Cairo', sans-serif;
+      background-color: #fafafa;
+      color: #18181b;
+      overflow-x: hidden;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    /* Prevent auto-zoom on iPhone/iOS inputs */
+    @media screen and (max-width: 768px) {
+      input, select, textarea {
+        font-size: 16px !important;
+      }
+    }
+
+    .dawi-shadow {
+      box-shadow: 0 4px 20px -2px rgba(190, 24, 93, 0.06), 0 2px 6px -1px rgba(0, 0, 0, 0.03);
+    }
+    
+    .dawi-card-hover {
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .dawi-card-hover:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 30px -5px rgba(190, 24, 93, 0.12), 0 6px 12px -2px rgba(0, 0, 0, 0.04);
+      border-color: #fbcfe8;
+    }
+
+    .image-zoom-container {
+      overflow: hidden;
+    }
+    .image-zoom-container img {
+      transition: transform 0.5s ease;
+    }
+    .dawi-card-hover:hover .image-zoom-container img {
+      transform: scale(1.06);
+    }
+
+    .btn-gradient {
+      background: linear-gradient(135deg, #db2777 0%, #be185d 100%);
+    }
+    .btn-gradient:hover {
+      background: linear-gradient(135deg, #e11d48 0%, #9d174d 100%);
+    }
+
+    /* Smooth Mobile Menu Slide */
+    #mobileMenu {
+      transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col justify-between selection:bg-brand-600 selection:text-white pb-20 lg:pb-0">
+
+  <!-- ================= TOP UTILITY BAR (RESPONSIVE) ================= -->
+  <div class="bg-brand-900 text-white text-[11px] sm:text-xs py-2 px-3 sm:px-4 border-b border-brand-800">
+    <div class="max-w-7xl mx-auto flex items-center justify-between gap-2">
+      <a href="https://maps.app.goo.gl/s8hcAWBSpp3M7xLr8" target="_blank" class="flex items-center gap-1.5 text-brand-200 hover:text-white transition truncate">
+        <i data-lucide="map-pin" class="w-3.5 h-3.5 text-brand-300 flex-shrink-0"></i>
+        <span class="truncate">زهراء المعادي، القاهرة (اللوكيشن)</span>
+      </a>
+
+      <div class="flex items-center space-x-3 space-x-reverse flex-shrink-0">
+        <a href="tel:+201050200642" class="hover:text-brand-200 font-bold flex items-center gap-1" dir="ltr">
+          <i data-lucide="phone-call" class="w-3.5 h-3.5 text-brand-300"></i>
+          <span>+20 10 50200642</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= MAIN HEADER & MOBILE NAV ================= -->
+  <header class="w-full bg-white border-b border-slate-200/80 sticky top-0 z-50 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 h-18 sm:h-20 flex items-center justify-between">
+      
+      <!-- Brand Logo -->
+      <a href="#" class="flex items-center gap-2.5 sm:gap-3.5 group">
+        <div class="w-11 h-11 sm:w-14 sm:h-14 rounded-xl sm:rounded-2xl bg-brand-50/70 border border-brand-100 flex items-center justify-center p-1 overflow-hidden shadow-sm flex-shrink-0">
+          <img src="kfuf_logo.png" alt="KFUF Clinic Logo" class="w-full h-full object-contain">
+        </div>
+        <div>
+          <span class="font-serif text-xl sm:text-2xl font-bold tracking-tight text-medical-navy block leading-none" dir="ltr">
+            KFUF <span class="text-brand-600 font-bold">CLINIC</span>
+          </span>
+          <span class="text-[10px] sm:text-[11px] text-brand-700 font-semibold tracking-wide">
+            عيادة كفوف للجلدية والتجميل
+          </span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="hidden lg:flex items-center space-x-7 space-x-reverse text-sm font-semibold text-slate-700">
+        <a href="#services" class="hover:text-brand-600 transition py-2 flex items-center gap-1">
+          خدماتنا وتخصصاتنا
+          <i data-lucide="chevron-down" class="w-3.5 h-3.5 text-slate-400"></i>
+        </a>
+        <a href="#why-us" class="hover:text-brand-600 transition py-2">عن العيادة</a>
+        <a href="#appointment-form" class="hover:text-brand-600 transition py-2">حجز موعد</a>
+        <a href="#location" class="hover:text-brand-600 transition py-2 flex items-center gap-1 text-brand-700">
+          <i data-lucide="map-pin" class="w-3.5 h-3.5 text-brand-600"></i>
+          اللوكيشن والخريطة
+        </a>
+        <a href="#contact-info" class="hover:text-brand-600 transition py-2">تواصل معنا</a>
+      </nav>
+
+      <!-- Desktop & Mobile Header Actions -->
+      <div class="flex items-center space-x-2 sm:space-x-3 space-x-reverse">
+        
+        <!-- Desktop Booking Button -->
+        <a href="#appointment-form" class="hidden sm:flex btn-gradient text-white px-4 sm:px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold tracking-wide shadow-md shadow-brand-600/20 transition items-center gap-2">
+          <i data-lucide="calendar-check" class="w-4 h-4"></i>
+          <span>احجز كشفك الآن</span>
+        </a>
+
+        <!-- Maps Quick Link -->
+        <a href="https://maps.app.goo.gl/s8hcAWBSpp3M7xLr8" target="_blank" class="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-brand-50 border border-brand-200 text-brand-600 hover:bg-brand-600 hover:text-white flex items-center justify-center transition shadow-sm" title="اللوكيشن على Google Maps">
+          <i data-lucide="navigation-2" class="w-4 h-4 sm:w-5 sm:h-5"></i>
+        </a>
+
+        <!-- WhatsApp Quick Link -->
+        <a href="https://wa.me/201050200642" target="_blank" class="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-emerald-50 border border-emerald-200 text-emerald-600 hover:bg-emerald-600 hover:text-white flex items-center justify-center transition shadow-sm" title="واتساب">
+          <i data-lucide="message-circle" class="w-4 h-4 sm:w-5 sm:h-5"></i>
+        </a>
+
+        <!-- Mobile Menu Toggle Button (Hamburger) -->
+        <button id="mobileMenuBtn" aria-label="Open Menu" class="lg:hidden w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-slate-100 text-slate-700 hover:text-brand-600 hover:bg-brand-50 flex items-center justify-center transition">
+          <i data-lucide="menu" id="menuIcon" class="w-5 h-5"></i>
+          <i data-lucide="x" id="closeIcon" class="w-5 h-5 hidden"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown Navigation Drawer -->
+    <div id="mobileMenu" class="hidden lg:hidden bg-white border-b border-slate-200 px-5 py-5 shadow-xl space-y-3">
+      <div class="flex items-center gap-3 pb-3 border-b border-slate-100">
+        <img src="kfuf_logo.png" alt="KFUF" class="w-10 h-10 object-contain">
+        <div>
+          <div class="font-serif font-bold text-base text-medical-navy">KFUF CLINIC</div>
+          <div class="text-[11px] text-brand-600 font-semibold">زهراء المعادي، القاهرة</div>
+        </div>
+      </div>
+
+      <nav class="flex flex-col space-y-2 text-sm font-bold text-slate-700">
+        <a href="#services" class="mobile-nav-link p-2.5 rounded-lg hover:bg-brand-50 hover:text-brand-600 flex items-center justify-between">
+          <span>خدماتنا وتخصصاتنا</span>
+          <i data-lucide="chevron-left" class="w-4 h-4 text-slate-400"></i>
+        </a>
+        <a href="#why-us" class="mobile-nav-link p-2.5 rounded-lg hover:bg-brand-50 hover:text-brand-600 flex items-center justify-between">
+          <span>عن العيادة والمميزات</span>
+          <i data-lucide="chevron-left" class="w-4 h-4 text-slate-400"></i>
+        </a>
+        <a href="#appointment-form" class="mobile-nav-link p-2.5 rounded-lg hover:bg-brand-50 hover:text-brand-600 flex items-center justify-between">
+          <span>حجز موعد أونلاين</span>
+          <i data-lucide="chevron-left" class="w-4 h-4 text-slate-400"></i>
+        </a>
+        <a href="#location" class="mobile-nav-link p-2.5 rounded-lg hover:bg-brand-50 hover:text-brand-600 flex items-center justify-between text-brand-700">
+          <span class="flex items-center gap-2">
+            <i data-lucide="map-pin" class="w-4 h-4 text-brand-600"></i>
+            موقع العيادة على الخريطة
+          </span>
+          <i data-lucide="chevron-left" class="w-4 h-4 text-slate-400"></i>
+        </a>
+        <a href="#contact-info" class="mobile-nav-link p-2.5 rounded-lg hover:bg-brand-50 hover:text-brand-600 flex items-center justify-between">
+          <span>معلومات التواصل وساعات العمل</span>
+          <i data-lucide="chevron-left" class="w-4 h-4 text-slate-400"></i>
+        </a>
+      </nav>
+
+      <div class="pt-3 border-t border-slate-100 flex flex-col gap-2">
+        <a href="#appointment-form" class="mobile-nav-link w-full btn-gradient text-white py-3 rounded-xl text-center font-bold text-xs shadow">
+          طلب موعد الآن
+        </a>
+        <a href="https://maps.app.goo.gl/s8hcAWBSpp3M7xLr8" target="_blank" class="w-full bg-slate-100 hover:bg-slate-200 text-slate-800 py-2.5 rounded-xl text-center font-semibold text-xs flex items-center justify-center gap-1.5">
+          <i data-lucide="navigation" class="w-3.5 h-3.5 text-brand-600"></i>
+          الاتجاهات عبر Google Maps
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= HERO SECTION (OPTIMIZED FOR MOBILE) ================= -->
+  <section class="relative bg-gradient-to-b from-brand-50/50 via-white to-slate-50/80 pt-6 sm:pt-10 pb-10 sm:pb-16 border-b border-slate-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-10 items-center mb-8 sm:mb-12">
+        
+        <!-- Text Column -->
+        <div class="lg:col-span-7 text-right">
+          
+          <div class="inline-flex items-center gap-2 bg-brand-100/90 text-brand-900 text-[11px] sm:text-xs font-bold px-3 py-1.5 rounded-full mb-3 sm:mb-4 border border-brand-200">
+            <span class="w-2 h-2 rounded-full bg-brand-600 animate-pulse"></span>
+            عيادة تجميل وجلدية معتمدة • زهراء المعادي
+          </div>
+
+          <h1 class="text-2xl sm:text-4xl lg:text-5xl font-black text-medical-navy leading-tight tracking-tight mb-3 sm:mb-4">
+            رعايتك التجميلية المتكاملة <br class="hidden sm:inline">
+            بأعلى معايير <span class="text-brand-600">الدقة الطبية والأمان</span>
+          </h1>
+
+          <p class="text-slate-600 text-xs sm:text-base leading-relaxed max-w-2xl mb-5 sm:mb-6">
+            نقدم في <strong class="text-slate-800 font-bold">عيادة كفوف (KFUF Clinic)</strong> أحدث علاجات الجلدية، حقن الفيلر والبوتوكس، وجلسات الليزر المتقدمة بأيدي نخبة من استشاريي الجلدية والتجميل لضمان نتائج طبيعية تدوم طويلاً.
+          </p>
+
+          <!-- Action Buttons in Hero -->
+          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 mb-6 sm:mb-8">
+            <a href="#appointment-form" class="btn-gradient text-white px-6 py-3.5 rounded-xl text-sm font-bold shadow-lg shadow-brand-600/25 transition flex items-center justify-center gap-2">
+              <i data-lucide="calendar" class="w-4 h-4"></i>
+              احجز استشارة خاصة
+            </a>
+
+            <a href="https://maps.app.goo.gl/s8hcAWBSpp3M7xLr8" target="_blank" class="bg-white hover:bg-slate-50 text-slate-700 border border-slate-300 px-5 py-3.5 rounded-xl text-sm font-bold shadow-sm transition flex items-center justify-center gap-2">
+              <i data-lucide="map-pin" class="w-4 h-4 text-brand-600"></i>
+              موقع العيادة (Google Maps)
+            </a>
+          </div>
+
+          <!-- Badges -->
+          <div class="flex flex-wrap items-center gap-2 sm:gap-4 text-[11px] sm:text-xs text-slate-600 font-medium">
+            <div class="flex items-center gap-1.5 bg-white px-2.5 py-1.5 rounded-lg border border-slate-200 shadow-sm">
+              <i data-lucide="shield-check" class="w-3.5 h-3.5 sm:w-4 sm:h-4 text-brand-600"></i>
+              أجهزة معتمدة من FDA
+            </div>
+            <div class="flex items-center gap-1.5 bg-white px-2.5 py-1.5 rounded-lg border border-slate-200 shadow-sm">
+              <i data-lucide="user-check" class="w-3.5 h-3.5 sm:w-4 sm:h-4 text-brand-600"></i>
+              استشاريون متخصصون
+            </div>
+            <div class="flex items-center gap-1.5 bg-white px-2.5 py-1.5 rounded-lg border border-slate-200 shadow-sm">
+              <i data-lucide="clock" class="w-3.5 h-3.5 sm:w-4 sm:h-4 text-brand-600"></i>
+              مواعيد دقيقة
+            </div>
+          </div>
+        </div>
+
+        <!-- Image Banner Column (Visual Presentation) -->
+        <div class="lg:col-span-5">
+          <div class="relative">
+            <div class="absolute -inset-2 bg-gradient-to-r from-brand-300/40 via-purple-200/40 to-pink-200/40 rounded-3xl opacity-40 blur-xl"></div>
+            
+            <div class="relative bg-white rounded-2xl sm:rounded-3xl p-2.5 sm:p-3 border border-brand-100 dawi-shadow overflow-hidden">
+              <div class="rounded-xl sm:rounded-2xl overflow-hidden aspect-[16/10] sm:aspect-[4/3] relative bg-slate-100">
+                <img 
+                  src="./بشره.png" 
+                  alt="KFUF Clinic Skincare & Aesthetics" 
+                  onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=800&q=80';"
+                  class="w-full h-full object-cover">
+                
+                <div class="absolute inset-0 bg-gradient-to-t from-medical-navy/85 via-transparent to-transparent flex items-end p-4 sm:p-5">
+                  <div class="text-white">
+                    <span class="bg-brand-600 text-white text-[9px] sm:text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider mb-1 inline-block">
+                      KFUF Clinic Zahraa El Maadi
+                    </span>
+                    <h3 class="text-base sm:text-lg font-bold text-white leading-snug">رعاية فائقة وبشرة نضرة</h3>
+                    <p class="text-[11px] sm:text-xs text-slate-200">أحدث بروتوكولات العناية السريرية بالبشرة</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Quick Info bar below image -->
+              <div class="p-2.5 sm:p-3 pt-3 flex items-center justify-between text-xs">
+                <div class="flex items-center gap-2">
+                  <div class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-ping"></div>
+                  <span class="font-bold text-slate-700 text-[11px] sm:text-xs">مواعيد اليوم متاحة</span>
+                </div>
+                <a href="https://maps.app.goo.gl/s8hcAWBSpp3M7xLr8" target="_blank" class="text-brand-600 font-bold hover:underline flex items-center gap-1 text-[11px] sm:text-xs">
+                  <i data-lucide="navigation" class="w-3.5 h-3.5"></i>
+                  فرع المعادي
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Quick 3-Step Search/Filter Bar (Stacking gracefully on Mobile) -->
+      <div class="bg-white rounded-2xl p-4 sm:p-5 border border-slate-200/90 dawi-shadow">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 items-center">
+          
+          <div>
+            <label class="block text-[11px] font-bold text-slate-500 mb-1 flex items-center gap-1">
+              <i data-lucide="stethoscope" class="w-3.5 h-3.5 text-brand-600"></i>
+              الخدمة المطلوبة
+            </label>
+            <select class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3 py-2.5 text-xs text-slate-800 font-medium focus:outline-none focus:border-brand-500">
+              <option>حقن الفيلر والبوتوكس</option>
+              <option>جلسات الليزر المتقدمة</option>
+              <option>نحت وتحديد ملامح الوجه</option>
+              <option>نضارة وتقشير البشرة</option>
+              <option>تنسيق ونحت القوام</option>
+              <option>استشارة سريرية شاملة</option>
+            </select>
+          </div>
+
+          <div>
+            <label class="block text-[11px] font-bold text-slate-500 mb-1 flex items-center gap-1">
+              <i data-lucide="user" class="w-3.5 h-3.5 text-brand-600"></i>
+              الطبيب / الاستشاري
+            </label>
+            <select class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3 py-2.5 text-xs text-slate-800 font-medium focus:outline-none focus:border-brand-500">
+              <option>أقرب استشاري متاح</option>
+              <option>استشاري الأمراض الجلدية والتجميل</option>
+              <option>أخصائي الليزر والعناية بالبشرة</option>
+            </select>
+          </div>
+
+          <div>
+            <label class="block text-[11px] font-bold text-slate-500 mb-1 flex items-center gap-1">
+              <i data-lucide="map-pin" class="w-3.5 h-3.5 text-brand-600"></i>
+              الفرع
+            </label>
+            <a href="https://maps.app.goo.gl/s8hcAWBSpp3M7xLr8" target="_blank" class="w-full bg-slate-50 hover:bg-slate-100 border border-slate-200 rounded-xl px-3 py-2.5 text-xs text-slate-800 font-bold flex items-center justify-between transition">
+              <span>زهراء المعادي - القاهرة</span>
+              <i data-lucide="external-link" class="w-3 h-3 text-brand-600"></i>
+            </a>
+          </div>
+
+          <div>
+            <label class="block text-[11px] font-bold text-transparent mb-1 hidden lg:block">Action</label>
+            <a href="#appointment-form" class="w-full btn-gradient text-white py-3 px-4 rounded-xl text-xs font-bold flex items-center justify-center gap-2 transition shadow-sm">
+              <i data-lucide="arrow-left" class="w-4 h-4"></i>
+              احجز موعدك الآن
+            </a>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= SERVICES & SPECIALTIES (TOUCH-FRIENDLY MOBILE CARDS) ================= -->
+  <section id="services" class="py-12 sm:py-16 bg-white border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-8 sm:mb-12">
+        <div>
+          <span class="text-xs font-bold text-brand-600 tracking-wider uppercase block mb-1">
+            خدمات وتخصصات عيادة كفوف
+          </span>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-medical-navy">
+            أحدث بروتوكولات التجميل والجلدية
+          </h2>
+        </div>
+        <p class="text-xs text-slate-500 mt-2 sm:mt-0 max-w-md">
+          تعتمد عيادتنا أحدث الأجهزة العالمية لتقديم نتائج دقيقة تلائم ملامحك الطبيعية مع فترات تعافي قياسية.
+        </p>
+      </div>
+
+      <!-- 6 Service Cards with Images (Responsive Grid) -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-7">
+        
+        <!-- Card 1: Injectables -->
+        <div class="bg-white rounded-2xl border border-slate-200 dawi-card-hover overflow-hidden flex flex-col justify-between">
+          <div>
+            <div class="h-44 sm:h-48 w-full image-zoom-container relative bg-slate-100">
+              <img 
+                src="./Max_a_Create_SLIDE_2_of_th.png" 
+                alt="حقن الفيلر والبوتوكس" 
+                onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?auto=format&fit=crop&w=600&q=80';"
+                class="w-full h-full object-cover">
+              <div class="absolute top-3 right-3 bg-white/90 backdrop-blur-sm px-2.5 py-1 rounded-lg text-[11px] font-bold text-brand-700 shadow-sm">
+                تجميل غير جراحي
+              </div>
+            </div>
+            
+            <div class="p-5 sm:p-6">
+              <div class="flex items-center gap-2 mb-2">
+                <div class="w-8 h-8 rounded-lg bg-brand-50 text-brand-600 flex items-center justify-center text-xs font-bold flex-shrink-0">
+                  <i data-lucide="sparkle" class="w-4 h-4"></i>
+                </div>
+                <h3 class="text-base sm:text-lg font-bold text-slate-800">
+                  حقن الفيلر والبوتوكس
+                </h3>
+              </div>
+              <p class="text-xs text-slate-500 leading-relaxed">
+                Anti-Aging & Injectables: استعادة حيوية الوجه، ملء الخطوط التعبيرية، وتحديد الشفاه والوجنتين بأجود الخامات المعتمدة عالمياً لمظهر متناسق وطبيعي.
+              </p>
+            </div>
+          </div>
+
+          <div class="p-5 sm:p-6 pt-0">
+            <div class="flex items-center gap-2.5 sm:gap-3 pt-4 border-t border-slate-100">
+              <a href="#appointment-form" class="flex-1 btn-gradient text-white text-center py-2.5 sm:py-3 rounded-xl text-xs font-bold transition">
+                احجز الآن
+              </a>
+              <a href="https://wa.me/201050200642?text=استفسار%20عن%20حقن%20الفيلر%20والبوتوكس" target="_blank" class="px-3.5 py-2.5 sm:py-3 rounded-xl border border-slate-200 text-slate-600 hover:bg-slate-50 text-xs font-semibold transition flex items-center gap-1">
+                <i data-lucide="message-circle" class="w-3.5 h-3.5 text-emerald-600"></i>
+                استفسار
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2: Laser -->
+        <div class="bg-white rounded-2xl border border-slate-200 dawi-card-hover overflow-hidden flex flex-col justify-between">
+          <div>
+            <div class="h-44 sm:h-48 w-full image-zoom-container relative bg-slate-100">
+              <img 
+                src="./Max_a_Create_SLIDE_3_of_th.png" 
+                alt="جلسات الليزر المتقدمة" 
+                onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1512290900672-1f4f5a34e062?auto=format&fit=crop&w=600&q=80';"
+                class="w-full h-full object-cover">
+              <div class="absolute top-3 right-3 bg-white/90 backdrop-blur-sm px-2.5 py-1 rounded-lg text-[11px] font-bold text-brand-700 shadow-sm">
+                كانديلا برو ماكس
+              </div>
+            </div>
+
+            <div class="p-5 sm:p-6">
+              <div class="flex items-center gap-2 mb-2">
+                <div class="w-8 h-8 rounded-lg bg-brand-50 text-brand-600 flex items-center justify-center text-xs font-bold flex-shrink-0">
+                  <i data-lucide="zap" class="w-4 h-4"></i>
+                </div>
+                <h3 class="text-base sm:text-lg font-bold text-slate-800">
+                  جلسات الليزر المتقدمة
+                </h3>
+              </div>
+              <p class="text-xs text-slate-500 leading-relaxed">
+                Laser Skin Resurfacing & Hair Removal: أحدث أجهزة الليزر لإزالة الشعر بدقة وتجديد خلايا البشرة وعلاج التصبغات والمسام الواسعة بأمان تام لجميع أنواع البشرة.
+              </p>
+            </div>
+          </div>
+
+          <div class="p-5 sm:p-6 pt-0">
+            <div class="flex items-center gap-2.5 sm:gap-3 pt-4 border-t border-slate-100">
+              <a href="#appointment-form" class="flex-1 btn-gradient text-white text-center py-2.5 sm:py-3 rounded-xl text-xs font-bold transition">
+                احجز الآن
+              </a>
+              <a href="https://wa.me/201050200642?text=استفسار%20عن%20جلسات%20الليزر" target="_blank" class="px-3.5 py-2.5 sm:py-3 rounded-xl border border-slate-200 text-slate-600 hover:bg-slate-50 text-xs font-semibold transition flex items-center gap-1">
+                <i data-lucide="message-circle" class="w-3.5 h-3.5 text-emerald-600"></i>
+                استفسار
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3: Facial Contouring -->
+        <div class="bg-white rounded-2xl border border-slate-200 dawi-card-hover overflow-hidden flex flex-col justify-between">
+          <div>
+            <div class="h-44 sm:h-48 w-full image-zoom-container relative bg-slate-100">
+              <img 
+                src="./Max_a_Create_a_premium_lux (1).png" 
+                alt="نحت وتحديد ملامح الوجه" 
+                onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=600&q=80';"
+                class="w-full h-full object-cover">
+              <div class="absolute top-3 right-3 bg-white/90 backdrop-blur-sm px-2.5 py-1 rounded-lg text-[11px] font-bold text-brand-700 shadow-sm">
+                تحديد الفك ونحت الوجه
+              </div>
+            </div>
+
+            <div class="p-5 sm:p-6">
+              <div class="flex items-center gap-2 mb-2">
+                <div class="w-8 h-8 rounded-lg bg-brand-50 text-brand-600 flex items-center justify-center text-xs font-bold flex-shrink-0">
+                  <i data-lucide="smile" class="w-4 h-4"></i>
+                </div>
+                <h3 class="text-base sm:text-lg font-bold text-slate-800">
+                  نحت وتحديد ملامح الوجه
+                </h3>
+              </div>
+              <p class="text-xs text-slate-500 leading-relaxed">
+                Facial Contouring & Lifting: إبراز زوايا الفك (Texas Technique)، شد ترهلات البشرة غير الجراحي، وتحقيق التناسق الجمالي المثالي للوجه بدون فترة نقاهة.
+              </p>
+            </div>
+          </div>
+
+          <div class="p-5 sm:p-6 pt-0">
+            <div class="flex items-center gap-2.5 sm:gap-3 pt-4 border-t border-slate-100">
+              <a href="#appointment-form" class="flex-1 btn-gradient text-white text-center py-2.5 sm:py-3 rounded-xl text-xs font-bold transition">
+                احجز الآن
+              </a>
+              <a href="https://wa.me/201050200642?text=استفسار%20عن%20نحت%20وتحديد%20ملامح%20الوجه" target="_blank" class="px-3.5 py-2.5 sm:py-3 rounded-xl border border-slate-200 text-slate-600 hover:bg-slate-50 text-xs font-semibold transition flex items-center gap-1">
+                <i data-lucide="message-circle" class="w-3.5 h-3.5 text-emerald-600"></i>
+                استفسار
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4: Skin Rejuvenation -->
+        <div class="bg-white rounded-2xl border border-slate-200 dawi-card-hover overflow-hidden flex flex-col justify-between">
+          <div>
+            <div class="h-44 sm:h-48 w-full image-zoom-container relative bg-slate-100">
+              <img 
+                src="./بشره.png" 
+                alt="نضارة وتقشير البشرة" 
+                onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1512290900672-1f4f5a34e062?auto=format&fit=crop&w=600&q=80';"
+                class="w-full h-full object-cover">
+              <div class="absolute top-3 right-3 bg-white/90 backdrop-blur-sm px-2.5 py-1 rounded-lg text-[11px] font-bold text-brand-700 shadow-sm">
+                هيدرافيشل وتقشير طبي
+              </div>
+            </div>
+
+            <div class="p-5 sm:p-6">
+              <div class="flex items-center gap-2 mb-2">
+                <div class="w-8 h-8 rounded-lg bg-brand-50 text-brand-600 flex items-center justify-center text-xs font-bold flex-shrink-0">
+                  <i data-lucide="droplet" class="w-4 h-4"></i>
+                </div>
+                <h3 class="text-base sm:text-lg font-bold text-slate-800">
+                  نضارة وتقشير البشرة
+                </h3>
+              </div>
+              <p class="text-xs text-slate-500 leading-relaxed">
+                Skin Rejuvenation & Peels: جلسات الهيدرافيشل العميقة، التقشير الكيميائي، وحقن النضارة (Skin Boosters) لاستعادة إشراقة ونقاء البشرة وتوحيد لونها.
+              </p>
+            </div>
+          </div>
+
+          <div class="p-5 sm:p-6 pt-0">
+            <div class="flex items-center gap-2.5 sm:gap-3 pt-4 border-t border-slate-100">
+              <a href="#appointment-form" class="flex-1 btn-gradient text-white text-center py-2.5 sm:py-3 rounded-xl text-xs font-bold transition">
+                احجز الآن
+              </a>
+              <a href="https://wa.me/201050200642?text=استفسار%20عن%20جلسات%20النضارة%20والتقشير" target="_blank" class="px-3.5 py-2.5 sm:py-3 rounded-xl border border-slate-200 text-slate-600 hover:bg-slate-50 text-xs font-semibold transition flex items-center gap-1">
+                <i data-lucide="message-circle" class="w-3.5 h-3.5 text-emerald-600"></i>
+                استفسار
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 5: Body Sculpting -->
+        <div class="bg-white rounded-2xl border border-slate-200 dawi-card-hover overflow-hidden flex flex-col justify-between">
+          <div>
+            <div class="h-44 sm:h-48 w-full image-zoom-container relative bg-slate-100">
+              <img 
+                src="./Max_a_Create_SLIDE_1_of_a_ (1).png" 
+                alt="تنسيق ونحت القوام" 
+                onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=600&q=80';"
+                class="w-full h-full object-cover">
+              <div class="absolute top-3 right-3 bg-white/90 backdrop-blur-sm px-2.5 py-1 rounded-lg text-[11px] font-bold text-brand-700 shadow-sm">
+                نحت بدون جراحة
+              </div>
+            </div>
+
+            <div class="p-5 sm:p-6">
+              <div class="flex items-center gap-2 mb-2">
+                <div class="w-8 h-8 rounded-lg bg-brand-50 text-brand-600 flex items-center justify-center text-xs font-bold flex-shrink-0">
+                  <i data-lucide="activity" class="w-4 h-4"></i>
+                </div>
+                <h3 class="text-base sm:text-lg font-bold text-slate-800">
+                  تنسيق ونحت القوام
+                </h3>
+              </div>
+              <p class="text-xs text-slate-500 leading-relaxed">
+                Body Sculpting & Aesthetics: تقنيات تفتيت الدهون الموضعية، شد الجلد والتخلص من السيلوليت لتحسين مظهر وتناسق القوام بأمان سريري تام.
+              </p>
+            </div>
+          </div>
+
+          <div class="p-5 sm:p-6 pt-0">
+            <div class="flex items-center gap-2.5 sm:gap-3 pt-4 border-t border-slate-100">
+              <a href="#appointment-form" class="flex-1 btn-gradient text-white text-center py-2.5 sm:py-3 rounded-xl text-xs font-bold transition">
+                احجز الآن
+              </a>
+              <a href="https://wa.me/201050200642?text=استفسار%20عن%20نحت%20وتنسيق%20القوام" target="_blank" class="px-3.5 py-2.5 sm:py-3 rounded-xl border border-slate-200 text-slate-600 hover:bg-slate-50 text-xs font-semibold transition flex items-center gap-1">
+                <i data-lucide="message-circle" class="w-3.5 h-3.5 text-emerald-600"></i>
+                استفسار
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 6: Consultation -->
+        <div class="bg-white rounded-2xl border border-slate-200 dawi-card-hover overflow-hidden flex flex-col justify-between">
+          <div>
+            <div class="h-44 sm:h-48 w-full image-zoom-container relative bg-slate-100">
+              <img 
+                src="./Max_a_Create_a_premium_lux.png" 
+                alt="استشارة سريرية شاملة" 
+                onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=600&q=80';"
+                class="w-full h-full object-cover">
+              <div class="absolute top-3 right-3 bg-white/90 backdrop-blur-sm px-2.5 py-1 rounded-lg text-[11px] font-bold text-brand-700 shadow-sm">
+                تشخيص مخصص
+              </div>
+            </div>
+
+            <div class="p-5 sm:p-6">
+              <div class="flex items-center gap-2 mb-2">
+                <div class="w-8 h-8 rounded-lg bg-brand-50 text-brand-600 flex items-center justify-center text-xs font-bold flex-shrink-0">
+                  <i data-lucide="clipboard-check" class="w-4 h-4"></i>
+                </div>
+                <h3 class="text-base sm:text-lg font-bold text-slate-800">
+                  استشارة سريرية شاملة
+                </h3>
+              </div>
+              <p class="text-xs text-slate-500 leading-relaxed">
+                Comprehensive Bespoke Consultation: فحص سريري دقيق لحالة البشرة وتحديد خطة علاج وتجميل متكاملة مصممة خصيصاً لاحتياجاتك وميزانيتك.
+              </p>
+            </div>
+          </div>
+
+          <div class="p-5 sm:p-6 pt-0">
+            <div class="flex items-center gap-2.5 sm:gap-3 pt-4 border-t border-slate-100">
+              <a href="#appointment-form" class="flex-1 btn-gradient text-white text-center py-2.5 sm:py-3 rounded-xl text-xs font-bold transition">
+                احجز الآن
+              </a>
+              <a href="https://wa.me/201050200642?text=طلب%20استشارة%20سريرية%20شاملة" target="_blank" class="px-3.5 py-2.5 sm:py-3 rounded-xl border border-slate-200 text-slate-600 hover:bg-slate-50 text-xs font-semibold transition flex items-center gap-1">
+                <i data-lucide="message-circle" class="w-3.5 h-3.5 text-emerald-600"></i>
+                استفسار
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= WHY CHOOSE KFUF (VALUE PROP) ================= -->
+  <section id="why-us" class="py-12 sm:py-14 bg-slate-50/80 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="text-center max-w-2xl mx-auto mb-8 sm:mb-10">
+        <h2 class="text-2xl font-black text-medical-navy mb-2">
+          لماذا يختار عملاؤنا عيادة كفوف؟
+        </h2>
+        <p class="text-xs text-slate-600">
+          نلتزم بأعلى معايير الرعاية الصحية التجميلية مع توفير الخصوصية والراحة التامة.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+        <div class="bg-white p-5 rounded-2xl border border-slate-200 text-center shadow-sm">
+          <div class="w-12 h-12 rounded-full bg-brand-50 text-brand-600 mx-auto flex items-center justify-center mb-3">
+            <i data-lucide="award" class="w-6 h-6"></i>
+          </div>
+          <h4 class="font-bold text-sm text-slate-800 mb-1">خبرة وكفاءة طبية</h4>
+          <p class="text-[11px] text-slate-500">أطباء واستشاريون معتمدون في الجلدية والتجميل</p>
+        </div>
+
+        <div class="bg-white p-5 rounded-2xl border border-slate-200 text-center shadow-sm">
+          <div class="w-12 h-12 rounded-full bg-brand-50 text-brand-600 mx-auto flex items-center justify-center mb-3">
+            <i data-lucide="check-check" class="w-6 h-6"></i>
+          </div>
+          <h4 class="font-bold text-sm text-slate-800 mb-1">مواد وأجهزة أصلية</h4>
+          <p class="text-[11px] text-slate-500">خامات معتمدة 100% من هيئة الدواء والغذاء (FDA)</p>
+        </div>
+
+        <div class="bg-white p-5 rounded-2xl border border-slate-200 text-center shadow-sm">
+          <div class="w-12 h-12 rounded-full bg-brand-50 text-brand-600 mx-auto flex items-center justify-center mb-3">
+            <i data-lucide="sparkles" class="w-6 h-6"></i>
+          </div>
+          <h4 class="font-bold text-sm text-slate-800 mb-1">نتائج طبيعية متناسقة</h4>
+          <p class="text-[11px] text-slate-500">فلسفة جمالية تبرز ملامحك دون تغيير مبالغ فيه</p>
+        </div>
+
+        <div class="bg-white p-5 rounded-2xl border border-slate-200 text-center shadow-sm">
+          <div class="w-12 h-12 rounded-full bg-brand-50 text-brand-600 mx-auto flex items-center justify-center mb-3">
+            <i data-lucide="lock" class="w-6 h-6"></i>
+          </div>
+          <h4 class="font-bold text-sm text-slate-800 mb-1">خصوصية وراحة تامة</h4>
+          <p class="text-[11px] text-slate-500">أجواء فندقية هادئة وغرف استشارة خاصة بالمعادي</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SERVICES & PRICING SECTION ================= -->
+  <section id="price-list" class="bg-slate-50 py-14 sm:py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+
+      <!-- Section Header -->
+      <div class="text-center mb-10">
+        <span class="inline-block bg-brand-100 text-brand-700 text-xs font-bold tracking-widest uppercase px-4 py-1.5 rounded-full mb-3">Price List</span>
+        <h2 class="text-2xl sm:text-3xl font-bold text-slate-800 mb-2">قائمة الخدمات والأسعار</h2>
+        <p class="text-slate-500 text-sm">جميع الخدمات متاحة بعيادة كفوف • زهراء المعادي</p>
+      </div>
+
+      <!-- Tabs Navigation -->
+      <div class="flex flex-wrap justify-center gap-2 mb-8" id="priceTabs">
+        <button onclick="showPriceTab('skin')" id="tab-skin" class="price-tab active-tab px-4 py-2 rounded-full text-sm font-bold transition">🌿 البشرة</button>
+        <button onclick="showPriceTab('beauty')" id="tab-beauty" class="price-tab px-4 py-2 rounded-full text-sm font-bold transition">💄 التجميل</button>
+        <button onclick="showPriceTab('hair')" id="tab-hair" class="price-tab px-4 py-2 rounded-full text-sm font-bold transition">💇 الشعر</button>
+        <button onclick="showPriceTab('body')" id="tab-body" class="price-tab px-4 py-2 rounded-full text-sm font-bold transition">💆 الجسم</button>
+        <button onclick="showPriceTab('slimming')" id="tab-slimming" class="price-tab px-4 py-2 rounded-full text-sm font-bold transition">🏃 التخسيس</button>
+        <button onclick="showPriceTab('nails')" id="tab-nails" class="price-tab px-4 py-2 rounded-full text-sm font-bold transition">💅 الأظافر</button>
+        <button onclick="showPriceTab('filler')" id="tab-filler" class="price-tab px-4 py-2 rounded-full text-sm font-bold transition">💉 الفيلر</button>
+      </div>
+
+      <style>
+        .price-tab { background: white; color: #64748b; border: 2px solid #e2e8f0; }
+        .price-tab:hover { border-color: #be185d; color: #be185d; }
+        .active-tab { background: #be185d !important; color: white !important; border-color: #be185d !important; }
+        .price-panel { display: none; }
+        .price-panel.active { display: block; }
+        .price-row { display: flex; align-items: center; justify-content: space-between; padding: 12px 16px; border-bottom: 1px solid #f1f5f9; }
+        .price-row:last-child { border-bottom: none; }
+        .price-row:hover { background: #fdf2f8; }
+        .price-badge { background: #fce7f3; color: #be185d; font-weight: 700; padding: 4px 12px; border-radius: 20px; font-size: 13px; white-space: nowrap; }
+        .price-badge-na { background: #f1f5f9; color: #64748b; font-weight: 600; padding: 4px 12px; border-radius: 20px; font-size: 12px; }
+      </style>
+
+      <!-- ===== SKIN TAB ===== -->
+      <div id="panel-skin" class="price-panel active bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden">
+        <div class="bg-gradient-to-l from-brand-600 to-brand-500 px-6 py-4 flex items-center gap-3">
+          <span class="text-2xl">🌿</span>
+          <div>
+            <h3 class="text-white font-bold text-lg">البشرة — Skin</h3>
+            <p class="text-brand-100 text-xs">تنظيف • بوتكس • حقن • تقشير • علاجات</p>
+          </div>
+        </div>
+        <div class="divide-y divide-slate-50">
+          <div class="price-row"><span class="text-sm text-slate-700 font-medium">تنظيف بشرة مستوى أول</span><span class="price-badge">400 جنيه</span></div>
+          <div class="price-row"><span class="text-sm text-slate-700 font-medium">تنظيف بشرة مستوى ثاني</span><span class="price-badge">500 جنيه</span></div>
+          <div class="price-row"><span class="text-sm text-slate-700 font-medium">تنظيف بشرة مستوى ثالث</span><span class="price-badge">600 جنيه</span></div>
+          <div class="price-row"><span class="text-sm text-slate-700 font-medium">جلسة تورد بشرة VIP +</span><span class="price-badge">750 جنيه</span></div>
+          <div class="price-row"><span class="text-sm text-slate-700 font-medium">جلسة تنضارة C+</span><span class="price-badge">900 جنيه</span></div>
+          <div class="price-row"><span class="text-sm text-slate-700 font-medium">ديرما بن ميزوبيرابي++ + تنظيف بشرة مستوى أول</span><span class="price-badge">1,200 جنيه</span></div>
+          <div class="price-row"><span class="text-sm text-slate-700 font-medium">جلسة علاج الحالات تحت العين D4</span><span class="price-badge">700 جنيه</span></div>
+          <div class="price-row"><span class="text-sm text-slate-700 font-medium">بوتكس المنطقة الواحدة</span><span class="price-badge">2,500 جنيه</span></div>
+          <div class="price-row"><span class="text-sm text-slate-700 font-medium">بوتكس الوجه كامل</span><span class="price-badge">7,500 جنيه</span></div>
+          <div class="price-row"><span class="text-sm text-slate-700 font-medium">سكين بوستر حسب النوع</span><span class="price-badge">يبدأ من 2,500</span></div>
+          <div class="price-row"><span class="text-sm text-slate-700 font-medium">جولدن اساتب</span><span class="price-badge">1,500 جنيه</span></div>
+          <div class="price-row"><span class="text-sm text-slate-700 font-medium">حقن ميزوبيرابي نضارة البشرة + التجاعيد + حقن جلوتاثيون</span><span class="price-badge">1,500+ جنيه</span></div>
+          <div class="price-row"><span class="text-sm text-slate-700 font-medium">حقن البيير التقتيع وتوريد ناضرة البشرة</span><span class="price-badge">1,500 جنيه</span></div>
+          <div class="price-row"><span class="text-sm text-slate-700 font-medium">حقن الأماكن الداكنة</span><span class="price-badge">1,200 جنيه</span></div>
+          <div class="price-row"><span class="text-sm text-slate-700 font-medium">تقشير بارد الوجه</span><span class="price-badge">1,500 جنيه</span></div>
+          <div class="price-row"><span class="text-sm text-slate-700 font-medium">تقشير بارد بـ ورقية</span><span class="price-badge">450 جنيه</span></div>
+          <div class="price-row"><span class="text-sm text-slate-700 font-medium">بلازما فيلر</span><span class="price-badge">800 جنيه</span></div>
+          <div class="price-row"><span class="text-sm text-slate-700 font-medium">حقن بلازما</span><span class="price-badge">1,200 جنيه</span></div>
+          <div class="price-row"><span class="text-sm text-slate-700 font-medium">حقن بلازما ديرما بن +</span><span class="price-badge">1,500+ جنيه</span></div>
+          <div class="price-row"><span class="text-sm text-slate-700 font-medium">سكين يوستر حسب النوع</span><span class="price-badge">يبدأ من 2,500</span></div>
+        </div>
+      </div>
+
+      <!-- ===== BEAUTY TAB ===== -->
+      <div id="panel-beauty" class="price-panel bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden">
+        <div class="bg-gradient-to-l from-brand-600 to-brand-500 px-6 py-4 flex items-center gap-3">
+          <span class="text-2xl">💄</span>
+          <div>
+            <h3 class="text-white font-bold text-lg">التجميل — Beauty</h3>
+            <p class="text-brand-100 text-xs">ميكرو • رموش دائمة • توريد شفايف • بيرسينج</p>
+          </div>
+        </div>
+        <div class="divide-y divide-slate-50">
+          <div class="price-row"><span class="text-sm text-slate-700 font-medium">ميكرو بالدبخ العادي</span><span class="price-badge">1,000 جنيه</span></div>
+          <div class="price-row"><span class="text-sm text-slate-700 font-medium">ميكرو بالدبخ الأمريكي</span><span class="price-badge">1,500 جنيه</span></div>
+          <div class="price-row"><span class="text-sm text-slate-700 font-medium">ميكرو شادو</span><span class="price-badge">1,500 جنيه</span></div>
+          <div class="price-row"><span class="text-sm text-slate-700 font-medium">توريد شفايف — العادي</span><span class="price-badge">1,000 جنيه</span></div>
+          <div class="price-row"><span class="text-sm text-slate-700 font-medium">توريد شفايف — الأمريكي</span><span class="price-badge">1,500 جنيه</span></div>
+          <div class="price-row"><span class="text-sm text-slate-700 font-medium">رموش دائمة كلاسيك</span><span class="price-badge">550 جنيه</span></div>
+          <div class="price-row"><span class="text-sm text-slate-700 font-medium">رموش دائمة هايبر</span><span class="price-badge">600 جنيه</span></div>
+          <div class="price-row"><span class="text-sm text-slate-700 font-medium">رموش دائمة فوليوم</span><span class="price-badge">650 جنيه</span></div>
+          <div class="price-row"><span class="text-sm text-slate-700 font-medium">رموش دائمة ميجا فوليوم</span><span class="price-badge">700 جنيه</span></div>
+          <div class="price-row"><span class="text-sm text-slate-700 font-medium">بيرسينج أذن / أنف / الحلق</span><span class="price-badge">650+ جنيه</span></div>
+          <div class="price-row"><span class="text-sm text-slate-700 font-medium">بيرسينج البطن / الحلق</span><span class="price-badge">650+ جنيه</span></div>
+          <div class="price-row"><span class="text-sm text-slate-700 font-medium">بيرسينج بكيني / الحلق</span><span class="price-badge">650+ جنيه</span></div>
+        </div>
+      </div>
+
+      <!-- ===== HAIR TAB ===== -->
+      <div id="panel-hair" class="price-panel bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden">
+        <div class="bg-gradient-to-l from-brand-600 to-brand-500 px-6 py-4 flex items-center gap-3">
+          <span class="text-2xl">💇</span>
+          <div>
+            <h3 class="text-white font-bold text-lg">الشعر — Hair</h3>
+            <p class="text-brand-100 text-xs">فيلر • كابيلار • بلازما • صبغة • خلايا جذعية</p>
+          </div>
+        </div>
+        <div class="divide-y divide-slate-50">
+          <div class="price-row"><span class="text-sm text-slate-700 font-medium">فيلر للشعر (حسب الطول والكثافة)</span><span class="price-badge">يبدأ من 2,500</span></div>
+          <div class="price-row"><span class="text-sm text-slate-700 font-medium">كابيلار شعر (حسب الطول والكثافة)</span><span class="price-badge">يبدأ من 2,500</span></div>
+          <div class="price-row"><span class="text-sm text-slate-700 font-medium">ترتيمنت للشعر (حسب الطول والكثافة)</span><span class="price-badge">يبدأ من 2,500</span></div>
+          <div class="price-row"><span class="text-sm text-slate-700 font-medium">خلايا جذعية</span><span class="price-badge">1,500 جنيه</span></div>
+          <div class="price-row"><span class="text-sm text-slate-700 font-medium">بلازما شعر</span><span class="price-badge">1,500 جنيه</span></div>
+          <div class="price-row"><span class="text-sm text-slate-700 font-medium">صبغة لون واحد</span><span class="price-badge">يبدأ من 1,500</span></div>
+        </div>
+      </div>
+
+      <!-- ===== BODY TAB ===== -->
+      <div id="panel-body" class="price-panel bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden">
+        <div class="bg-gradient-to-l from-brand-600 to-brand-500 px-6 py-4 flex items-center gap-3">
+          <span class="text-2xl">💆</span>
+          <div>
+            <h3 class="text-white font-bold text-lg">الجسم — Body</h3>
+            <p class="text-brand-100 text-xs">حجامة • مساج • علاجات الجسم</p>
+          </div>
+        </div>
+        <div class="divide-y divide-slate-50">
+          <div class="price-row"><span class="text-sm text-slate-700 font-medium">حجامة جسم كامل</span><span class="price-badge">1,000 جنيه</span></div>
+          <div class="price-row"><span class="text-sm text-slate-700 font-medium">جسم كامل + حجامة رقبة وظهر (أنثى أو ذكر)</span><span class="price-badge">1,500 جنيه</span></div>
+          <div class="price-row"><span class="text-sm text-slate-700 font-medium">حجامة رقبة وظهر +</span><span class="price-badge">1,000 جنيه</span></div>
+          <div class="price-row"><span class="text-sm text-slate-700 font-medium">مساج جسم كامل (سيدات فقط)</span><span class="price-badge">1,000 جنيه</span></div>
+          <div class="price-row"><span class="text-sm text-slate-700 font-medium">مساج رقبة وظهر</span><span class="price-badge">550 جنيه</span></div>
+          <div class="price-row"><span class="text-sm text-slate-700 font-medium">حجامة رقبة وظهر +</span><span class="price-badge">1,000 جنيه</span></div>
+        </div>
+      </div>
+
+      <!-- ===== SLIMMING TAB ===== -->
+      <div id="panel-slimming" class="price-panel bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden">
+        <div class="bg-gradient-to-l from-brand-600 to-brand-500 px-6 py-4 flex items-center gap-3">
+          <span class="text-2xl">🏃</span>
+          <div>
+            <h3 class="text-white font-bold text-lg">التخسيس — Slimming</h3>
+            <p class="text-brand-100 text-xs">ليزر • هيفو • IPG • شد الجسم</p>
+          </div>
+        </div>
+        <div class="divide-y divide-slate-50">
+          <div class="price-row"><span class="text-sm text-slate-700 font-medium">ليزر تخسيس — جلسة واحدة</span><span class="price-badge">1,200 جنيه</span></div>
+          <div class="price-row"><span class="text-sm text-slate-700 font-medium">كورس 6 جلسات تخسيس للمنطقة الواحدة</span><span class="price-badge">6,000 جنيه</span></div>
+          <div class="price-row"><span class="text-sm text-slate-700 font-medium">كورس شد وتخسيس IPG 6 جلسات للمنطقة الكاملة</span><span class="price-badge">6,000 جنيه</span></div>
+          <div class="price-row"><span class="text-sm text-slate-700 font-medium">جلسة هيفو لشد الوجه</span><span class="price-badge">750 جنيه</span></div>
+          <div class="price-row"><span class="text-sm text-slate-700 font-medium">كورس 6 جلسات هيفو شد الوجه</span><span class="price-badge">4,200 جنيه</span></div>
+        </div>
+      </div>
+
+      <!-- ===== NAILS TAB ===== -->
+      <div id="panel-nails" class="price-panel bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden">
+        <div class="bg-gradient-to-l from-brand-600 to-brand-500 px-6 py-4 flex items-center gap-3">
+          <span class="text-2xl">💅</span>
+          <div>
+            <h3 class="text-white font-bold text-lg">الأظافر — Nails</h3>
+            <p class="text-brand-100 text-xs">هارد جيل • سوفت جيل • بديكير • ترتيمنت</p>
+          </div>
+        </div>
+        <div class="px-6 py-3 bg-brand-50 border-b border-brand-100">
+          <p class="text-brand-700 text-xs font-medium">📞 للاستعلام عن الأسعار تواصلي معنا على واتساب أو اتصلي بنا</p>
+        </div>
+        <div class="divide-y divide-slate-50">
+          <div class="price-row"><span class="text-sm text-slate-700 font-medium">هارد جيل أمريكي معالج بفيتامين 14++ لون جيل بديكير كهربائي</span><span class="price-badge-na">تواصلي معنا</span></div>
+          <div class="price-row"><span class="text-sm text-slate-700 font-medium">هارد جيل صيني++ لون جيل بديكير عادي</span><span class="price-badge-na">تواصلي معنا</span></div>
+          <div class="price-row"><span class="text-sm text-slate-700 font-medium">سوفت جيل أو فيل بلاز++ لون الجيل بديكير</span><span class="price-badge-na">تواصلي معنا</span></div>
+          <div class="price-row"><span class="text-sm text-slate-700 font-medium">ترتيمنت جيل بوليش++ لون جيل بديكير</span><span class="price-badge-na">تواصلي معنا</span></div>
+          <div class="price-row"><span class="text-sm text-slate-700 font-medium">جلسة ترتيمنت بديكير كهربائي اسكراب كاملة للقدم</span><span class="price-badge-na">تواصلي معنا</span></div>
+          <div class="price-row"><span class="text-sm text-slate-700 font-medium">جلسة ترتيمنت بديكير كهربائي اسكراب كاملة للبد</span><span class="price-badge-na">تواصلي معنا</span></div>
+        </div>
+      </div>
+
+      <!-- ===== FILLER TAB ===== -->
+      <div id="panel-filler" class="price-panel bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden">
+        <div class="bg-gradient-to-l from-brand-600 to-brand-500 px-6 py-4 flex items-center gap-3">
+          <span class="text-2xl">💉</span>
+          <div>
+            <h3 class="text-white font-bold text-lg">الفيلر — Filler</h3>
+            <p class="text-brand-100 text-xs">فيلر شفايف • فيلر خدود • حقنة ملي</p>
+          </div>
+        </div>
+        <div class="divide-y divide-slate-50">
+          <div class="price-row"><span class="text-sm text-slate-700 font-medium">فيلر شفايف (حسب النوع)</span><span class="price-badge">2,500 جنيه</span></div>
+          <div class="price-row"><span class="text-sm text-slate-700 font-medium">فيلر خدود وجه — حقنة ملي (حسب النوع)</span><span class="price-badge">3,500 جنيه</span></div>
+        </div>
+      </div>
+
+      <!-- Footer note -->
+      <div class="mt-6 text-center">
+        <p class="text-slate-400 text-xs">* الأسعار قابلة للتغيير • للاستفسار والحجز تواصلي معنا على</p>
+        <a href="https://wa.me/201050200642?text=مرحباً، أريد الاستعلام عن الأسعار والخدمات" target="_blank"
+          class="inline-flex items-center gap-2 mt-3 bg-green-500 hover:bg-green-600 text-white text-sm font-bold px-6 py-2.5 rounded-full transition">
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.122.558 4.112 1.528 5.832L0 24l6.335-1.652A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.002-1.368l-.36-.214-3.735.979.996-3.648-.235-.374A9.818 9.818 0 1112 21.818z"/></svg>
+          واتساب للاستعلام
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <script>
+    function showPriceTab(tab) {
+      // Hide all panels
+      document.querySelectorAll('.price-panel').forEach(p => p.classList.remove('active'));
+      document.querySelectorAll('.price-tab').forEach(t => t.classList.remove('active-tab'));
+      // Show selected
+      document.getElementById('panel-' + tab).classList.add('active');
+      document.getElementById('tab-' + tab).classList.add('active-tab');
+    }
+  </script>
+
+  <!-- ================= MAIN SECTION: APPOINTMENT & INTERACTIVE GOOGLE MAPS ================= -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 py-12 sm:py-14 flex-grow">
+    
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-start">
+      
+      <!-- LEFT / MAIN COLUMN: APPOINTMENT FORM -->
+      <div id="appointment-form" class="lg:col-span-7 bg-white rounded-2xl p-5 sm:p-8 border border-slate-200 dawi-shadow">
+        
+        <div class="flex items-center justify-between pb-5 mb-5 border-b border-slate-100">
+          <div>
+            <h2 class="text-xl sm:text-2xl font-bold text-medical-navy">
+              طلب حجز موعد
+            </h2>
+            <p class="text-xs text-slate-500 mt-0.5">
+              Request an Appointment • عيادة كفوف زهراء المعادي
+            </p>
+          </div>
+          <span class="w-10 h-10 rounded-xl bg-brand-50 text-brand-600 flex items-center justify-center flex-shrink-0">
+            <i data-lucide="calendar" class="w-5 h-5"></i>
+          </span>
+        </div>
+
+        <form id="contactForm" class="space-y-4 sm:space-y-5">
+          
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5 sm:gap-4">
+            <div>
+              <label class="block text-xs font-bold text-slate-700 mb-1">
+                الاسم الأول <span class="text-slate-400 font-normal">(First Name) *</span>
+              </label>
+              <input 
+                type="text" 
+                id="firstName" 
+                name="firstName" 
+                placeholder="مثال: سارة" 
+                required
+                class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:border-brand-500 focus:bg-white transition">
+            </div>
+
+            <div>
+              <label class="block text-xs font-bold text-slate-700 mb-1">
+                اسم العائلة <span class="text-slate-400 font-normal">(Last Name) *</span>
+              </label>
+              <input 
+                type="text" 
+                id="lastName" 
+                name="lastName" 
+                placeholder="مثال: أحمد" 
+                required
+                class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:border-brand-500 focus:bg-white transition">
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5 sm:gap-4">
+            <div>
+              <label class="block text-xs font-bold text-slate-700 mb-1">
+                رقم الهاتف المحمول <span class="text-slate-400 font-normal">(Phone) *</span>
+              </label>
+              <input 
+                type="tel" 
+                id="phone" 
+                name="phone" 
+                placeholder="010XXXXXXXX" 
+                required
+                class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:border-brand-500 focus:bg-white transition">
+            </div>
+
+            <div>
+              <label class="block text-xs font-bold text-slate-700 mb-1">
+                البريد الإلكتروني <span class="text-slate-400 font-normal">(Email)</span>
+              </label>
+              <input 
+                type="email" 
+                id="email" 
+                name="email" 
+                placeholder="name@example.com" 
+                class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:border-brand-500 focus:bg-white transition">
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-xs font-bold text-slate-700 mb-1">
+              مجال الاهتمام أو الخدمة المطلوبة <span class="text-slate-400 font-normal">(Area of Interest) *</span>
+            </label>
+            <div class="relative">
+              <select 
+                id="treatmentCategory" 
+                name="category" 
+                required
+                class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm text-slate-800 appearance-none cursor-pointer focus:outline-none focus:border-brand-500 focus:bg-white transition pr-10">
+                <option value="" disabled selected>اختر نوع الخدمة أو الإجراء التجميلي</option>
+                <option value="Anti-Aging & Injectables (Botox & Fillers)">حقن الفيلر والبوتوكس (Botox & Fillers)</option>
+                <option value="Laser Skin Resurfacing">جلسات الليزر المتقدمة وتجديد البشرة</option>
+                <option value="Facial Contouring & Lifting">نحت وتحديد ملامح الوجه والفك</option>
+                <option value="Skin Rejuvenation & Peels">نضارة وتقشير البشرة (هيدرافيشل / تقشير)</option>
+                <option value="Body Sculpting & Aesthetics">تنسيق ونحت القوام</option>
+                <option value="Comprehensive Bespoke Consultation">استشارة سريرية شاملة</option>
+              </select>
+              <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-slate-400">
+                <i data-lucide="chevron-down" class="w-4 h-4"></i>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-xs font-bold text-slate-700 mb-1">
+              ملاحظات أو استفسار إضافي <span class="text-slate-400 font-normal">(Optional Message)</span>
+            </label>
+            <textarea 
+              id="message" 
+              name="message" 
+              rows="3" 
+              placeholder="اكتب هنا أي تفاصيل أو مواعيد تفضلها..." 
+              class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:border-brand-500 focus:bg-white transition resize-none"></textarea>
+          </div>
+
+          <button 
+            type="submit" 
+            class="w-full btn-gradient text-white py-3.5 sm:py-4 px-6 rounded-xl text-base font-bold flex items-center justify-center gap-2 transition shadow-lg shadow-brand-600/25 cursor-pointer">
+            <span>إرسال طلب الحجز</span>
+            <i data-lucide="arrow-left" class="w-5 h-5"></i>
+          </button>
+          
+          <p class="text-center text-[11px] text-slate-400 mt-2">
+            سيقوم فريق خدمة العملاء بالتواصل معكِ لتأكيد الموعد فور استلام الطلب.
+          </p>
+        </form>
+      </div>
+
+      <!-- RIGHT COLUMN: BRANCH & INTERACTIVE GOOGLE MAPS -->
+      <div id="contact-info" class="lg:col-span-5 space-y-6">
+        
+        <!-- CARD 1: Branch Details with Mini Logo Watermark -->
+        <div class="bg-white rounded-2xl p-5 sm:p-7 border border-slate-200 dawi-shadow relative overflow-hidden">
+          <img src="kfuf_logo.png" alt="" class="absolute -bottom-8 -left-8 w-32 h-32 opacity-5 pointer-events-none">
+
+          <div class="flex items-center justify-between pb-4 border-b border-slate-100 mb-5">
+            <div>
+              <h3 class="text-base sm:text-lg font-bold text-medical-navy">
+                فرع زهراء المعادي
+              </h3>
+              <p class="text-xs text-slate-500">KFUF CLINIC • Zahraa El Maadi</p>
+            </div>
+            <span class="text-xs bg-brand-50 text-brand-700 font-bold px-3 py-1 rounded-full border border-brand-100">
+              الفرع الرئيسي
+            </span>
+          </div>
+
+          <div class="space-y-4 text-sm">
+            <div class="flex items-start gap-3.5">
+              <div class="w-10 h-10 rounded-xl bg-brand-50 text-brand-600 flex items-center justify-center flex-shrink-0 mt-0.5">
+                <i data-lucide="map-pin" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <div class="text-xs font-bold text-slate-400">العنوان والموقع</div>
+                <div class="text-slate-800 font-bold text-sm mt-0.5">عيادة كفوف (KFUF CLINIC)</div>
+                <div class="text-slate-500 text-xs">زهراء المعادي، القاهرة، مصر</div>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3.5">
+              <div class="w-10 h-10 rounded-xl bg-brand-50 text-brand-600 flex items-center justify-center flex-shrink-0 mt-0.5">
+                <i data-lucide="phone" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <div class="text-xs font-bold text-slate-400">رقم الهاتف والحجز المباشر</div>
+                <a href="tel:+201050200642" class="text-brand-600 font-bold text-sm mt-0.5 hover:underline inline-block" dir="ltr">
+                  +20 10 50200642
+                </a>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3.5">
+              <div class="w-10 h-10 rounded-xl bg-brand-50 text-brand-600 flex items-center justify-center flex-shrink-0 mt-0.5">
+                <i data-lucide="mail" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <div class="text-xs font-bold text-slate-400">البريد الإلكتروني</div>
+                <a href="mailto:concierge@kfufclinic.com" class="text-slate-700 font-medium text-xs mt-0.5 hover:text-brand-600 transition inline-block">
+                  concierge@kfufclinic.com
+                </a>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3.5">
+              <div class="w-10 h-10 rounded-xl bg-brand-50 text-brand-600 flex items-center justify-center flex-shrink-0 mt-0.5">
+                <i data-lucide="clock" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <div class="text-xs font-bold text-slate-400">مواعيد العمل</div>
+                <div class="text-slate-800 font-semibold text-xs mt-0.5">
+                  السبت إلى الخميس: 09:00 صباحاً - 10:00 مساءً
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 2: REAL GOOGLE MAPS EMBEDDED -->
+        <div id="location" class="bg-white rounded-2xl overflow-hidden border border-slate-200 dawi-shadow">
+          <div class="p-4 border-b border-slate-100 flex items-center justify-between">
+            <span class="font-bold text-sm text-slate-800 flex items-center gap-2">
+              <i data-lucide="map" class="w-4 h-4 text-brand-600"></i>
+              موقع العيادة على الخريطة
+            </span>
+            <a href="https://maps.app.goo.gl/s8hcAWBSpp3M7xLr8" target="_blank" class="text-xs text-brand-600 font-bold hover:underline flex items-center gap-1">
+              فتح في الخرائط
+              <i data-lucide="external-link" class="w-3 h-3"></i>
+            </a>
+          </div>
+
+          <div class="relative w-full h-56 sm:h-64 bg-slate-100">
+            <iframe 
+              src="https://maps.google.com/maps?q=29.9626323,31.3088102&hl=ar&z=16&output=embed" 
+              class="w-full h-full border-0" 
+              allowfullscreen="" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+
+          <!-- Big Navigation Button (Direct to Google Maps App on phone) -->
+          <div class="p-4 bg-slate-50 border-t border-slate-200">
+            <a 
+              href="https://maps.app.goo.gl/s8hcAWBSpp3M7xLr8" 
+              target="_blank" 
+              class="w-full btn-gradient text-white py-3 px-4 rounded-xl text-xs font-bold flex items-center justify-center gap-2 transition shadow-md shadow-brand-600/25 group">
+              <i data-lucide="navigation" class="w-4 h-4 group-hover:scale-110 transition-transform"></i>
+              <span>فتح اللوكيشن في تطبيق Google Maps</span>
+              <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- CARD 3: Direct WhatsApp Chat -->
+        <div class="bg-gradient-to-br from-emerald-500 to-teal-600 rounded-2xl p-5 sm:p-6 text-white shadow-md flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+          <div>
+            <h4 class="font-bold text-base mb-1">خدمة الاستفسار الفوري عبر واتساب</h4>
+            <p class="text-xs text-emerald-100 max-w-xs leading-relaxed">
+              تحدثي مباشرة مع فريق خدمة العملاء للإجابة عن الأسعار والمواعيد المتاحة.
+            </p>
+          </div>
+          <a href="https://wa.me/201050200642" target="_blank" class="w-full sm:w-auto text-center bg-white text-emerald-700 hover:bg-emerald-50 px-4 py-2.5 rounded-xl font-bold text-xs shadow transition flex items-center justify-center gap-1.5 flex-shrink-0">
+            <i data-lucide="message-circle" class="w-4 h-4"></i>
+            تواصل الآن
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="w-full bg-medical-navy text-slate-300 border-t border-slate-800 mt-12 sm:mt-16 pt-10 sm:pt-12 pb-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-6 sm:gap-8 pb-8 border-b border-slate-800">
+        
+        <div class="md:col-span-2">
+          <div class="flex items-center gap-3 mb-3">
+            <div class="w-10 h-10 rounded-xl bg-white p-1 overflow-hidden flex-shrink-0">
+              <img src="kfuf_logo.png" alt="KFUF Clinic" class="w-full h-full object-contain">
+            </div>
+            <span class="font-serif font-bold text-xl text-white tracking-wide">KFUF CLINIC</span>
+          </div>
+          <p class="text-slate-400 text-xs leading-relaxed max-w-sm">
+            عيادة كفوف للجلدية والتجميل والليزر في زهراء المعادي. نعتز بتقديم خدمات تجميلية آمنة وبأعلى دقة سريرية تمنحك الثقة والجمال الطبيعي.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="text-white font-bold text-sm mb-3">أقسام العيادة</h4>
+          <ul class="space-y-2 text-xs text-slate-400">
+            <li><a href="#services" class="hover:text-brand-400 transition">حقن الفيلر والبوتوكس</a></li>
+            <li><a href="#services" class="hover:text-brand-400 transition">جلسات الليزر وإزالة الشعر</a></li>
+            <li><a href="#services" class="hover:text-brand-400 transition">نحت وتحديد ملامح الوجه</a></li>
+            <li><a href="#services" class="hover:text-brand-400 transition">نضارة وتقشير البشرة</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-white font-bold text-sm mb-3">تواصل سريع</h4>
+          <ul class="space-y-2 text-xs text-slate-400">
+            <li class="flex items-center gap-2">
+              <i data-lucide="phone" class="w-3.5 h-3.5 text-brand-400"></i>
+              <span dir="ltr">+20 10 50200642</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <i data-lucide="mail" class="w-3.5 h-3.5 text-brand-400"></i>
+              <span>concierge@kfufclinic.com</span>
+            </li>
+            <li>
+              <a href="https://maps.app.goo.gl/s8hcAWBSpp3M7xLr8" target="_blank" class="flex items-center gap-2 hover:text-brand-400 transition">
+                <i data-lucide="map-pin" class="w-3.5 h-3.5 text-brand-400"></i>
+                <span>زهراء المعادي، القاهرة (اللوكيشن)</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="pt-6 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-2">
+        <p>&copy; 2024 جميع الحقوق محفوظة لـ عيادة كفوف (KFUF Clinic).</p>
+        <a href="https://maps.app.goo.gl/s8hcAWBSpp3M7xLr8" target="_blank" class="font-medium hover:text-brand-400 transition flex items-center gap-1">
+          <i data-lucide="map-pin" class="w-3.5 h-3.5 text-brand-500"></i>
+          KFUF Clinic على خرائط Google
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================= DESKTOP FLOATING BUTTONS (HIDDEN ON MOBILE) ================= -->
+  <div class="hidden lg:flex fixed bottom-6 left-6 z-40 flex-col gap-3">
+    <!-- Quick Maps Button -->
+    <a 
+      href="https://maps.app.goo.gl/s8hcAWBSpp3M7xLr8" 
+      target="_blank" 
+      class="w-13 h-13 rounded-full bg-white text-slate-800 border border-slate-200 flex items-center justify-center shadow-lg hover:scale-110 transition-all duration-300"
+      title="اللوكيشن على Google Maps">
+      <i data-lucide="map-pin" class="w-6 h-6 text-brand-600"></i>
+    </a>
+
+    <!-- WhatsApp Button -->
+    <a 
+      href="https://wa.me/201050200642?text=مرحباً%20عيادة%20كفوف،%20أود%20الاستفسار%20عن%20حجز%20موعد%20في%20فرع%20المعادي" 
+      target="_blank" 
+      class="w-13 h-13 rounded-full bg-emerald-500 hover:bg-emerald-600 text-white flex items-center justify-center shadow-lg hover:scale-110 transition-all duration-300 relative"
+      title="تواصل عبر واتساب">
+      <i data-lucide="message-circle" class="w-7 h-7"></i>
+      <span class="absolute -top-1 -right-1 flex h-3.5 w-3.5">
+        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-300 opacity-75"></span>
+        <span class="relative inline-flex rounded-full h-3.5 w-3.5 bg-emerald-400"></span>
+      </span>
+    </a>
+  </div>
+
+  <!-- ================= DEDICATED STICKY MOBILE BOTTOM ACTION BAR (DAWI STYLE CRO) ================= -->
+  <div class="lg:hidden fixed bottom-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-t border-slate-200/90 py-2 px-3 shadow-[0_-4px_20px_rgba(0,0,0,0.06)]">
+    <div class="grid grid-cols-4 gap-1.5 text-center">
+      
+      <!-- 1. Call Direct -->
+      <a href="tel:+201050200642" class="flex flex-col items-center justify-center py-1 rounded-lg text-slate-700 hover:text-brand-600 hover:bg-brand-50/60 active:scale-95 transition">
+        <div class="w-7 h-7 rounded-full bg-slate-100 flex items-center justify-center mb-0.5">
+          <i data-lucide="phone" class="w-4 h-4 text-brand-700"></i>
+        </div>
+        <span class="text-[10px] font-bold">اتصال</span>
+      </a>
+
+      <!-- 2. WhatsApp Instant -->
+      <a href="https://wa.me/201050200642?text=مرحباً%20عيادة%20كفوف،%20أود%20الاستفسار%20عن%20المواعيد" target="_blank" class="flex flex-col items-center justify-center py-1 rounded-lg text-emerald-700 hover:bg-emerald-50 active:scale-95 transition">
+        <div class="w-7 h-7 rounded-full bg-emerald-100 flex items-center justify-center mb-0.5 relative">
+          <i data-lucide="message-circle" class="w-4 h-4 text-emerald-600"></i>
+          <span class="absolute -top-0.5 -right-0.5 w-2 h-2 rounded-full bg-emerald-500 animate-ping"></span>
+        </div>
+        <span class="text-[10px] font-bold">واتساب</span>
+      </a>
+
+      <!-- 3. Google Maps Location -->
+      <a href="https://maps.app.goo.gl/s8hcAWBSpp3M7xLr8" target="_blank" class="flex flex-col items-center justify-center py-1 rounded-lg text-slate-700 hover:text-brand-600 hover:bg-brand-50/60 active:scale-95 transition">
+        <div class="w-7 h-7 rounded-full bg-rose-50 flex items-center justify-center mb-0.5">
+          <i data-lucide="map-pin" class="w-4 h-4 text-rose-500"></i>
+        </div>
+        <span class="text-[10px] font-bold">اللوكيشن</span>
+      </a>
+
+      <!-- 4. Book Now Primary CTA -->
+      <a href="#appointment-form" class="flex flex-col items-center justify-center py-1 rounded-xl btn-gradient text-white shadow-sm active:scale-95 transition">
+        <div class="w-7 h-7 rounded-full bg-white/20 flex items-center justify-center mb-0.5">
+          <i data-lucide="calendar" class="w-4 h-4 text-white"></i>
+        </div>
+        <span class="text-[10px] font-black tracking-wide">احجز الآن</span>
+      </a>
+
+    </div>
+  </div>
+
+  <!-- ================= SUCCESS MODAL ================= -->
+  <div id="successModal" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+    <div class="bg-white rounded-2xl max-w-md w-full p-6 sm:p-8 border border-slate-200 text-center relative shadow-2xl">
+      <div class="w-16 h-16 rounded-full bg-brand-50 text-brand-600 mx-auto flex items-center justify-center mb-4">
+        <i data-lucide="check" class="w-8 h-8"></i>
+      </div>
+      <h3 class="text-xl font-bold text-medical-navy mb-1">تم استلام طلبك بنجاح!</h3>
+      <p class="text-slate-500 text-xs mb-5 leading-relaxed">
+        شكراً لاختياركِ عيادة كفوف. سيقوم فريق الاستقبال بمراجعة طلبك والتواصل معك لتأكيد الموعد.
+      </p>
+      <div class="space-y-2.5">
+        <a id="modalWhatsAppBtn" href="#" target="_blank" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white py-3 px-4 rounded-xl text-xs font-bold flex items-center justify-center gap-2 transition">
+          <i data-lucide="message-circle" class="w-4 h-4"></i>
+          <span>تأكيد الموعد فوراً عبر واتساب</span>
+        </a>
+        <a href="https://maps.app.goo.gl/s8hcAWBSpp3M7xLr8" target="_blank" class="w-full bg-slate-100 hover:bg-slate-200 text-slate-700 py-3 px-4 rounded-xl text-xs font-semibold transition flex items-center justify-center gap-2">
+          <i data-lucide="map-pin" class="w-4 h-4 text-brand-600"></i>
+          <span>عرض موقع العيادة على الخريطة</span>
+        </a>
+        <button id="closeModalBtn" class="w-full text-slate-400 hover:text-slate-600 py-2 text-xs font-medium transition">
+          إغلاق النافذة
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= SCRIPTS ================= -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      if (window.lucide) {
+        lucide.createIcons();
+      }
+
+      // Mobile Menu Toggle
+      const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+      const mobileMenu = document.getElementById('mobileMenu');
+      const menuIcon = document.getElementById('menuIcon');
+      const closeIcon = document.getElementById('closeIcon');
+      const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+      if (mobileMenuBtn && mobileMenu) {
+        mobileMenuBtn.addEventListener('click', () => {
+          const isHidden = mobileMenu.classList.contains('hidden');
+          if (isHidden) {
+            mobileMenu.classList.remove('hidden');
+            menuIcon?.classList.add('hidden');
+            closeIcon?.classList.remove('hidden');
+          } else {
+            mobileMenu.classList.add('hidden');
+            menuIcon?.classList.remove('hidden');
+            closeIcon?.classList.add('hidden');
+          }
+        });
+
+        mobileNavLinks.forEach(link => {
+          link.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+            menuIcon?.classList.remove('hidden');
+            closeIcon?.classList.add('hidden');
+          });
+        });
+      }
+
+      // Form Handling
+      const contactForm = document.getElementById('contactForm');
+      const successModal = document.getElementById('successModal');
+      const closeModalBtn = document.getElementById('closeModalBtn');
+      const modalWhatsAppBtn = document.getElementById('modalWhatsAppBtn');
+
+      if (contactForm) {
+        contactForm.addEventListener('submit', (e) => {
+          e.preventDefault();
+
+          const firstName = document.getElementById('firstName')?.value.trim() || '';
+          const lastName = document.getElementById('lastName')?.value.trim() || '';
+          const email = document.getElementById('email')?.value.trim() || '';
+          const phone = document.getElementById('phone')?.value.trim() || '';
+          const category = document.getElementById('treatmentCategory')?.value || 'استشارة عامة';
+          const message = document.getElementById('message')?.value.trim() || '';
+
+          const fullName = `${firstName} ${lastName}`.trim();
+
+          const waText = encodeURIComponent(
+            `*طلب حجز موعد جديد - عيادة كفوف (المعادي)*\n` +
+            `------------------------------------\n` +
+            `👤 *الاسم:* ${fullName}\n` +
+            `📞 *رقم الهاتف:* ${phone}\n` +
+            `✉️ *البريد:* ${email || 'غير مدخل'}\n` +
+            `✨ *الخدمة المطلوبة:* ${category}\n` +
+            (message ? `📝 *ملاحظات:* ${message}\n` : '') +
+            `------------------------------------\n` +
+            `📍 اللوكيشن: https://maps.app.goo.gl/s8hcAWBSpp3M7xLr8\n` +
+            `تم الإرسال عبر موقع عيادة كفوف`
+          );
+
+          if (modalWhatsAppBtn) {
+            modalWhatsAppBtn.href = `https://wa.me/201050200642?text=${waText}`;
+          }
+
+          if (successModal) {
+            successModal.classList.remove('hidden');
+          }
+
+          contactForm.reset();
+        });
+      }
+
+      if (closeModalBtn && successModal) {
+        closeModalBtn.addEventListener('click', () => {
+          successModal.classList.add('hidden');
+        });
+      }
+    });
+  </script>
+
+</body>
+</html>
